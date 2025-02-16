@@ -1,0 +1,23 @@
+spring:
+  # 数据源类型
+  datasource:
+    # 数据源类型
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 30000
+      connection-test-query: SELECT 1
+    logging:
+      level:
+        org.springframework.jdbc: DEBUG
+        com.zaxxer.hikari: DEBUG
+    # 数据库连接信息
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatisplus?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
