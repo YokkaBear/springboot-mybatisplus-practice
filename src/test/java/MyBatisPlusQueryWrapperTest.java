@@ -1,7 +1,9 @@
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.Update;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cicc.itgm.MyBatisPlusApplication;
 import com.cicc.itgm.dao.UserEntity;
 import com.cicc.itgm.mapper.UserMapper;
@@ -152,5 +154,31 @@ public class MyBatisPlusQueryWrapperTest {
                 .le(ageEnd != null, UserEntity::getAge, ageEnd);
         List<UserEntity> users = userMapper.selectList(queryWrapper);
         users.forEach(System.out::println);
+    }
+
+    @Test
+    public void testLambdaUpdateWrapper() {
+        LambdaUpdateWrapper<UserEntity> updateWrapper = new LambdaUpdateWrapper<>();
+        updateWrapper.set(UserEntity::getAge, 36)
+                .set(UserEntity::getEmail, "pointGuardChefCurry@gmail.com")
+                .and(it -> it.eq(UserEntity::getName, "Curry").or().isNull(UserEntity::getEmail)); // lambda表达式内的逻辑优先运算
+        int result = userMapper.update(UserEntity.builder().build(), updateWrapper);
+        System.out.println("影响行数：" + result);
+    }
+
+    @Test
+    public void testPage() {
+        // 设置分页参数
+        Page<UserEntity> page = new Page<>(2, 5);
+        userMapper.selectPage(page, null);
+        // 查看返回结果
+        List<UserEntity> users = page.getRecords();
+        users.forEach(System.out::println);
+        System.out.println("当前页：" + page.getCurrent());
+        System.out.println("每页显示条数：" + page.getSize());
+        System.out.println("总记录数：" + page.getTotal());
+        System.out.println("总页数：" + page.getPages());
+        System.out.println("是否有上一页：" + page.hasPrevious());
+        System.out.println("是否有下一页：" + page.hasNext());
     }
 }
