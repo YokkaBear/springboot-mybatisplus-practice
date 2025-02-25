@@ -2,6 +2,7 @@ package com.cicc.itgm.dao;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Builder;
 import lombok.Data;
@@ -23,4 +24,7 @@ public class UserEntity {
 
     @TableField("email")
     private String email;
+
+    @TableLogic
+    private Integer isDeleted;
 }

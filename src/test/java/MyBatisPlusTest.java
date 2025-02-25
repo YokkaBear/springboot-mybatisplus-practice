@@ -123,4 +123,17 @@ public class MyBatisPlusTest {
         boolean result = userService.saveBatch(userList);
         System.out.println("saveBatch result is: " + result);
     }
+
+    @Test
+    public void testDeleteWithTableLogic() {
+        int result = userMapper.deleteById(15L);
+        System.out.println(result);
+    }
+
+    @Test
+    public void testSelectAfterLogicDelete() {
+        List<UserEntity> users = userMapper.selectList(null);
+        users.forEach(System.out::println);
+        System.out.println(users.size());
+    }
 }
