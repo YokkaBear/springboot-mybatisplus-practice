@@ -1,13 +1,9 @@
 package com.cicc.itgm.dao;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import com.cicc.itgm.enums.NationEnum;
 import lombok.Builder;
 import lombok.Data;
-
-import java.util.Optional;
 
 @Data
 @Builder
@@ -24,6 +20,9 @@ public class UserEntity {
 
     @TableField("email")
     private String email;
+
+    @TableField("nation")
+    private NationEnum nation;
 
     @TableLogic
     private Integer isDeleted;
