@@ -1,5 +1,3 @@
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.cicc.itgm.MyBatisPlusApplication;
 import com.cicc.itgm.dao.UserEntity;
 import com.cicc.itgm.enums.NationEnum;
