@@ -1,11 +1,10 @@
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.Update;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cicc.itgm.MyBatisPlusApplication;
-import com.cicc.itgm.dao.UserEntity;
+import com.cicc.itgm.dao.mysql.UserEntity;
 import com.cicc.itgm.mapper.UserMapper;
 import com.cicc.itgm.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @SpringBootTest(classes = MyBatisPlusApplication.class)
 public class MyBatisPlusQueryWrapperTest {

@@ -1,5 +1,5 @@
 import com.cicc.itgm.MyBatisPlusApplication;
-import com.cicc.itgm.dao.ProductEntity;
+import com.cicc.itgm.dao.mysql.ProductEntity;
 import com.cicc.itgm.mapper.ProductMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

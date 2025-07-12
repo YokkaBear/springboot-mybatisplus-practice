@@ -1,4 +1,4 @@
-package com.cicc.itgm.dao;
+package com.cicc.itgm.dao.mysql;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.cicc.itgm.enums.NationEnum;

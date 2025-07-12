@@ -1,7 +1,7 @@
 package com.cicc.itgm.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.cicc.itgm.dao.UserEntity;
+import com.cicc.itgm.dao.mysql.UserEntity;
 import com.cicc.itgm.mapper.UserMapper;
 import org.springframework.stereotype.Service;
 

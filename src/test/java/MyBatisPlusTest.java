@@ -1,5 +1,5 @@
 import com.cicc.itgm.MyBatisPlusApplication;
-import com.cicc.itgm.dao.UserEntity;
+import com.cicc.itgm.dao.mysql.UserEntity;
 import com.cicc.itgm.mapper.UserMapper;
 import com.cicc.itgm.service.UserService;
 import org.junit.jupiter.api.Test;

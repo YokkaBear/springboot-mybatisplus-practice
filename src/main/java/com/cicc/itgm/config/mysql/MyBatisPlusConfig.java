@@ -1,4 +1,4 @@
-package com.cicc.itgm.config;
+package com.cicc.itgm.config.mysql;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;

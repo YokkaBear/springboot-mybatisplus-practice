@@ -17,6 +17,21 @@ spring:
     url: jdbc:mysql://localhost:3306/mybatisplus?useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
+  # 配置mongo数据源
+  data:
+    mongodb:
+      primary:
+        uri: mongodb://localhost:27017/user
+        database: user
+      secondary:
+        uri: mongodb://localhost:27017/product
+        database: product
+      statistics:
+        uri: mongodb://localhost:27017/statistics
+        database: statistics
+      report:
+        uri: mongodb://localhost:27017/report
+        database: report
 
 mybatis-plus:
   configuration:

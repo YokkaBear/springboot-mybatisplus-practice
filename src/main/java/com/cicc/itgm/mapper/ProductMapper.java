@@ -1,7 +1,7 @@
 package com.cicc.itgm.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.cicc.itgm.dao.ProductEntity;
+import com.cicc.itgm.dao.mysql.ProductEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
